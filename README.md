@@ -20,3 +20,6 @@ All required items are included in the [outputs](outputs/) folder. Only the desi
 
 ## Architecture
 ![architecture](outputs/Step1/Step1_Architecture.png)
+
+## Testing the Springer function app locally
+You can test the function app locally using [sample_request.py](starter/Function/sample_request.py).
