@@ -1,0 +1,235 @@
+"""
+For the Courses Index, Results have been truncated to first three returned documents for brevity
+For the Papers Index, the content fields have been truncated and only the first document returned 
+included in this text file
+"""
+# ----------------------------------------
+Index: Courses
+Query String: refreshable machine learning
+# ----------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 30.654938,
+            "PartitionKey": "ud-learn",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.9068559Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.906Z",
+            "Key": "ud-learnd0d366b2-71cb-47ef-9257-fc2f05fd0c4d",
+            "description": "In this program, students will enhance their skills by building and deploying sophisticated Machine Learning (ML)             solutions using popular open source tools and frameworks such as scikit-learn. Using Azure Machine Learning’s MLOps capabilities, students will gain experience in understanding their ML models, protecting people and their data, and controlling the end-to-end ML lifecycle at scale. Gain practical experience by using the built-in Azure labs accessible inside the Udacity classroom and run complex machine learning tasks for no additional cost. ",
+            "duration": 3,
+            "instructor": "",
+            "level": "intermediate",
+            "product": "Python, Azure ML SDK, Hyperdrive, AutoML",
+            "rating_average": null,
+            "rating_count": null,
+            "role": "Machine Learning Engineer",
+            "source": "Udacity",
+            "title": "Machine Learning Engineer for Microsoft Azure",
+            "url": "https://www.udacity.com/course/machine-learning-engineer-for-microsoft-azure-nanodegree--nd00333",
+            "organizations": [],
+            "keyphrases": [
+                "learn"
+            ]
+        },
+        {
+            "@search.score": 26.103645,
+            "PartitionKey": "ms-learn",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A40.1565511Z'\"",
+            "Timestamp": "2021-07-13T15:41:40.156Z",
+            "Key": "ms-learn458c8cc3-1d5f-4f3b-a713-25c7b62055d6",
+            "description": "Use automated machine learning in Azure Machine Learning",
+            "duration": 45,
+            "instructor": "",
+            "level": "beginner",
+            "product": "azure-machine-learning",
+            "rating_average": 4.75,
+            "rating_count": 3459,
+            "role": "data-scientist",
+            "source": "MS Learn",
+            "title": "Use automated machine learning in Azure Machine Learning",
+            "url": "https://docs.microsoft.com/en-us/learn/modules/use-automated-machine-learning/?WT.mc_id=api_CatalogApi",
+            "organizations": [],
+            "keyphrases": [
+                "ms",
+                "learn"
+            ]
+        },
+        {
+            "@search.score": 26.103645,
+            "PartitionKey": "ms-learn",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A50.2677272Z'\"",
+            "Timestamp": "2021-07-13T15:41:50.267Z",
+            "Key": "ms-learn9047ec1d-3190-4c8b-bcb4-0818a69ef813",
+            "description": "Explain machine learning models with Azure Machine Learning",
+            "duration": 47,
+            "instructor": "",
+            "level": "intermediate",
+            "product": "azure-machine-learning",
+            "rating_average": 4.76,
+            "rating_count": 522,
+            "role": "data-scientist",
+            "source": "MS Learn",
+            "title": "Explain machine learning models with Azure Machine Learning",
+            "url": "https://docs.microsoft.com/en-us/learn/modules/explain-machine-learning-models-with-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+            "organizations": [],
+            "keyphrases": [
+                "ms",
+                "learn"
+            ]
+        }
+    ],
+    "@odata.nextLink": "https://awari.search.windows.net/indexes('azuretable-index')/docs?api-version=2020-06-30-Preview&search=refreshable%20machine%20learning&$skip=50"
+}
+
+# -----------------------
+Index: Papers
+Query: reputation systems
+# -----------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azureblob-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 28.283611,
+            "content": "\nSänger et al. Journal of Trust Management  (2015) 2:5 \nDOI 10.1186/s40493-015-0015-3\n\nRESEARCH Open Access\n\nReusable components for online reputation\nsystems\nJohannes Sänger*, Christian Richthammer and Günther Pernul\n\n*Correspondence:\njohannes.saenger@wiwi.\nuni-regensburg.de\nUniversity of Regensburg,\nUniversitätsstraße 31, 93053\nRegensburg, Germany\n\nAbstract\n\nReputation systems have been extensively explored in various disciplines and\napplication areas. A problem in this context is that the computation engines applied by\nmost reputation systems available are designed from scratch and rarely consider well\nestablished concepts and achievements made by others. Thus, approved models and\npromising approaches may get lost in the shuffle. In this work, we aim to foster reuse in\nrespect of trust and reputation systems by providing a hierarchical component\ntaxonomy of computation engines which serves as a natural framework for the design\nof new reputation systems. In order to assist the design process we, furthermore,\nprovide a component repository that contains design knowledge on both a\nconceptual and an implementation level. To evaluate our approach we conduct a\ndescriptive scenario-based analysis which shows that it has an obvious utility from a\npractical point of view. Matching the identified components and the properties of trust\nintroduced in literature, we finally show which properties of trust are widely covered by\ncommon models and which aspects have only rarely been considered so far.\n\nKeywords: Trust; Reputation; Reusability; Trust pattern\n\nIntroduction\nIn the last decade, trust and reputation have been extensively explored in various disci-\nplines and application areas. Thereby, a wide range of metrics and computation methods\nfor reputation-based trust has been proposed. While most common systems have been\nintroduced in e-commerce, such as eBay’s reputation system [1] that allows to rate sell-\ners and buyers,...",
+            "metadata_storage_path": "aHR0cHM6Ly9iYWx1d2UuYmxvYi5jb3JlLndpbmRvd3MubmV0L3BhcGVycy9zNDA0OTMtMDE1LTAwMTUtMy5wZGY1",
+            "metadata_title": "",
+            "metadata_creation_date": "2015-05-19T12:42:36Z",
+            "organizations": [
+                "al. Journal of Trust Management",
+                "University of Regensburg",
+                "Reusability; Trust",
+                "eBay",
+                "Springer",
+                "Creative Commons\nAttribution License",
+                "Page 2",
+                "Gambetta",
+                "Dynamic Trust",
+                "The",
+                "Ama",
+                "Reflexive Trust",
+                "Figure 1",
+                "Time",
+                "Sporas",
+                "Further",
+                "iCLUB",
+                "Google",
+                "Epinions",
+                "Sun",
+                "Sun et al.",
+                "Amazon",
+                "Hidden\nMarkov Models",
+                "PDF",
+                "Hidden\nMarkov Model",
+                "Eigentrust Algorithm"
+            ],
+            "people": [
+                "Johannes",
+                "Christian Richthammer",
+                "Günther Pernul",
+                "Springer",
+                "Gambetta",
+                "Alice",
+                "Bob",
+                "Claire",
+                "Christianson",
+                "Harbison",
+                "Alice trusts Claire",
+                "Rachel",
+                "Zhang",
+                "Page",
+                "Slashdot",
+                "Yu",
+                "Singh",
+                "Malik"
+            ],
+            "keyphrases": [
+                "mobile ad hoc networks",
+                "Günther Pernul",
+                "Universitätsstraße",
+                "descriptive scenario-based analysis",
+                "one novel idea",
+                "Open Access article",
+                "single building blocks",
+                "RESEARCH Open Access",
+                "new reputation systems",
+                "most reputation systems",
+                "common reputation models",
+                "common systems",
+                "social networks",
+                "common models",
+                "online reputation",
+                "Sänger",
+                "Christian Richthammer",
+                "various disciplines",
+                "application areas",
+                "promising approaches",
+                "hierarchical component",
+                "component repository",
+                "implementation level",
+                "obvious utility",
+                "practical point",
+                "last decade",
+                "wide range",
+                "considerable research",
+                "data accuracy",
+                "several environments",
+                "statistical approaches",
+                "personal preferences",
+                "Creative Commons",
+                "Attribution License",
+                "unrestricted use",
+                "effective use",
+                "graph-based models",
+                "computation phase",
+                "natural framework",
+                "design process",
+                ...
+            ],
+            "merged_content": "\nSänger et al. Journal of Trust Management  (2015) 2:5 \nDOI 10.1186/s40493-015-0015-3\n\nRESEARCH Open Access\n\nReusable components for online reputation\nsystems\nJohannes Sänger*, Christian Richthammer and Günther Pernul\n\n*Correspondence:\njohannes.saenger@wiwi.\nuni-regensburg.de\nUniversity of Regensburg,\nUniversitätsstraße 31, 93053\nRegensburg, Germany\n\nAbstract\n\nReputation systems have been extensively explored in various disciplines and\napplication areas. A problem in this context is that the computation engines applied by\nmost reputation systems available are designed from scratch and rarely consider well\nestablished concepts and achievements made by others. Thus, approved models and\npromising approaches may get lost in the shuffle. In this work, we aim to foster reuse in\nrespect of trust and reputation systems by providing a hierarchical component\ntaxonomy of computation engines which serves as a natural framework for the design\nof new reputation systems. In order to assist the design process we, furthermore,\nprovide a component repository that contains design knowledge on both a\nconceptual and an implementation level. To evaluate our approach we conduct a\ndescriptive scenario-based analysis which shows that it has an obvious utility from a\npractical point of view. Matching the identified components and the properties of trust\nintroduced in literature, we finally show which properties of trust are widely covered by\ncommon models and which aspects have only rarely been considered so far.\n\nKeywords: Trust; Reputation; Reusability; Trust pattern\n\nIntroduction\nIn the last decade, trust and reputation have been extensively explored in various disci-\nplines and application areas. Thereby, a wide range of metrics and computation methods\nfor reputation-based trust has been proposed. While most common systems have been\nintroduced in e-commerce, such as eBay’s reputation system [1] that allows to rate sell-\ners and buyers, considerable research has also been done in the context of peer-to-peer\nnetworks, mobile ad hoc networks, social networks or ensuring data accuracy, relevance\nand quality in several environments [2]. Computation methods applied range from sim-\nple arithmetic over statistical approaches up to graph-based models involving multiple\nfactors such as context information, propagation or personal preferences. A general prob-\nlem is that most of the newly introduced trust and reputation models use computation\nmethods that are designed from scratch and rely on one novel idea which could lead to\nbetter solutions [3]. Only a few authors build on proposals of others. Therefore, approved\nmodels and promising approaches may get lost in the shuffle.\nIn this work, we aim to encourage reuse in the development of reputation systems by\n\nproviding a framework for creating reputation systems based on reusable components.\nDesign approaches for reuse have been given much attention in the software engineering\n\n© 2015 Sänger et al.;..."
+            "text": [
+                "reputation system computation collection & storage & preparation filtering weighting aggregation communication input context, personalisation trust relation reputation value(s) output trustor trustee transaction/situation",
+                "filtering weighting aggregation context comparability simple arithmetic attribute-based criteria compatibility credibility/propagation statistic statistic-based reliability rating value fuzzy time clustering-based graph-based personal preferences",
+                "context comparability simple arithmetic attribute-based criteria compatibility credibility/propagation statistic statistic-based reliability rating value fuzzy time clustering-based service repository (implementation level)- graph-based personal preferences knowledge repository (conceptual level) filtering weighting aggregation",
+                "Client Server filtering AgeBasedAbsolute Clustering implement/ inherit weighting CongruenceAbsolute Webservice Webservice abstract CallHelper CallHandler Component TimeDiscounting Relative aggregation CongruenceAbsolute TimeDiscounting Relative",
+                "Filter: Weighting: referral reduced set age-based context similarity weighted referral Aggregation: referral reputation filter (absolut) (absolute set average value congruence) set",
+                "Published online: 13 May 2015"
+            ],
+            "imageTags": [
+                "text",
+                "screenshot",
+                "abstract",
+                "design",
+                "clock",
+                "screenshot",
+                "abstract",
+                "text",
+                "internet",
+                "text",
+                "screenshot",
+                "design",
+                "abstract",
+                "template",
+                "screenshot",
+                "text",
+                "parallel",
+                "design",
+                "diagram",
+                "line",
+                "text",
+                "screenshot",
+                "font",
+                "cartoon",
+                "illustration",
+                "text",
+                "sketch",
+                "drawing",
+                "graphic",
+                "design",
+                "clipart"
+            ]
+        }
+    ]
+}

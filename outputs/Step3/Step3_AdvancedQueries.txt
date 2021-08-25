@@ -1,0 +1,293 @@
+# -------------------------------------------------------------------------------
+Index: Papers
+Query: search=Big data stream analysis&$select=metadata_title,doi,publicationName
+# -------------------------------------------------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azureblob-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 36.278008,
+            "metadata_title": "Big data stream analysis: a systematic literature review",
+            "doi": "10.1186/s40537-019-0210-7",
+            "publicationName": "Journal of Big Data"
+        },
+        {
+            "@search.score": 33.503204,
+            "metadata_title": "Privacy preservation techniques in big data analytics: a survey",
+            "doi": "10.1186/s40537-018-0141-8",
+            "publicationName": "Journal of Big Data"
+        },
+        {
+            "@search.score": 33.429962,
+            "metadata_title": "Context-aware rule learning from smartphone data: survey, challenges and future directions",
+            "doi": "10.1186/s40537-019-0258-4",
+            "publicationName": "Journal of Big Data"
+        }
+    ]
+}
+# --------------------------------------------------------------------------------------------------------------------------
+Index: Papers
+Query: search=(publicationName eq 'Journal of Big Data' and publisher='Springer')&$select=metadata_title,publicationName,doi
+# --------------------------------------------------------------------------------------------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azureblob-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 45.58583,
+            "metadata_title": "Privacy preservation techniques in big data analytics: a survey",
+            "doi": "10.1186/s40537-018-0141-8",
+            "publicationName": "Journal of Big Data"
+        },
+        {
+            "@search.score": 35.27915,
+            "metadata_title": "Big data stream analysis: a systematic literature review",
+            "doi": "10.1186/s40537-019-0210-7",
+            "publicationName": "Journal of Big Data"
+        },
+        {
+            "@search.score": 29.976133,
+            "metadata_title": "Context-aware rule learning from smartphone data: survey, challenges and future directions",
+            "doi": "10.1186/s40537-019-0258-4",
+            "publicationName": "Journal of Big Data"
+        }
+    ]
+}
+# ----------------------------------------------------------------
+Index: Courses
+Query: search=instructor eq 'Mike Montoya'&$orderby=rating_average
+# ----------------------------------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.4815556Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.481Z",
+            "Key": "company-moodlec6b7fbd0-7390-4370-ab77-45027596b520",
+            "description": "Understand ways you can be more healthy in the work environment including what ergonomic equipment is available to you",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.6,
+            "rating_count": 525,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Workplace Health",
+            "url": "https://www.example.com/course13",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        },
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.479555Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.479Z",
+            "Key": "company-moodle5b293283-81e6-4f89-a0ab-7053988d6f6a",
+            "description": "Learn how to track billable and non-billable hours by assigning time to projects and other relevant time codes",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.8,
+            "rating_count": 540,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Onboarding - Time Tracking ",
+            "url": "https://www.example.com/course1",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        },
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.479555Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.479Z",
+            "Key": "company-moodle30e3c6e5-9415-4d85-8229-c2133203c535",
+            "description": "Learn the policies related to the distribution and use of computers, phones, software, and other technology",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.9,
+            "rating_count": 550,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Onboarding - Technology Policies ",
+            "url": "https://www.example.com/course2",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        }
+    ]
+}
+# --------------------------------------------------------------------------------------------
+Index: Courses
+Query: search=instructor eq 'Mike Montoya'&$orderby=rating_average&$filter=rating_count gt 500
+# --------------------------------------------------------------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.4815556Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.481Z",
+            "Key": "company-moodlec6b7fbd0-7390-4370-ab77-45027596b520",
+            "description": "Understand ways you can be more healthy in the work environment including what ergonomic equipment is available to you",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.6,
+            "rating_count": 525,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Workplace Health",
+            "url": "https://www.example.com/course13",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        },
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.479555Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.479Z",
+            "Key": "company-moodle5b293283-81e6-4f89-a0ab-7053988d6f6a",
+            "description": "Learn how to track billable and non-billable hours by assigning time to projects and other relevant time codes",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.8,
+            "rating_count": 540,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Onboarding - Time Tracking ",
+            "url": "https://www.example.com/course1",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        },
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.479555Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.479Z",
+            "Key": "company-moodle30e3c6e5-9415-4d85-8229-c2133203c535",
+            "description": "Learn the policies related to the distribution and use of computers, phones, software, and other technology",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.9,
+            "rating_count": 550,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Onboarding - Technology Policies ",
+            "url": "https://www.example.com/course2",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        }
+    ]
+}
+# -------------------------------------------------------------
+Index: Courses
+Query: search=instructor eq 'Mike Montoya'&$facets=rating_count
+# -------------------------------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.479555Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.479Z",
+            "Key": "company-moodle30e3c6e5-9415-4d85-8229-c2133203c535",
+            "description": "Learn the policies related to the distribution and use of computers, phones, software, and other technology",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.9,
+            "rating_count": 550,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Onboarding - Technology Policies ",
+            "url": "https://www.example.com/course2",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        },
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.479555Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.479Z",
+            "Key": "company-moodle5b293283-81e6-4f89-a0ab-7053988d6f6a",
+            "description": "Learn how to track billable and non-billable hours by assigning time to projects and other relevant time codes",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.8,
+            "rating_count": 540,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Onboarding - Time Tracking ",
+            "url": "https://www.example.com/course1",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        },
+        {
+            "@search.score": 1.4871113,
+            "PartitionKey": "company-moodle",
+            "ETag": "W/\"datetime'2021-07-13T15%3A41%3A58.4815556Z'\"",
+            "Timestamp": "2021-07-13T15:41:58.481Z",
+            "Key": "company-moodlec6b7fbd0-7390-4370-ab77-45027596b520",
+            "description": "Understand ways you can be more healthy in the work environment including what ergonomic equipment is available to you",
+            "duration": 1,
+            "instructor": "Mike Montoya",
+            "level": "beginner",
+            "product": "NA",
+            "rating_average": 4.6,
+            "rating_count": 525,
+            "role": "all",
+            "source": "Company Moodle",
+            "title": "Workplace Health",
+            "url": "https://www.example.com/course13",
+            "organizations": [],
+            "keyphrases": [
+                "moodle"
+            ],
+            "instructorProfile": "[{\"name\":\"Mike Montoya\",\"description\":\"Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.\",\"matches\":[{\"text\":\"mike montoya\",\"offset\":0,\"length\":12,\"matchDistance\":0.0}]}]"
+        }
+    ]
+}

@@ -1,0 +1,172 @@
+{
+  "@odata.context": "https://awari.search.windows.net/$metadata#skillsets/$entity",
+  "@odata.etag": "\"0x8D9642EB3B47E53\"",
+  "name": "papers-skillset",
+  "description": "Skillset created from the portal. skillsetName: papers-skillset; contentField: merged_content; enrichmentGranularity: document; knowledgeStoreStorageAccount: baluwe;",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Text.EntityRecognitionSkill",
+      "name": "#1",
+      "description": null,
+      "context": "/document/merged_content",
+      "categories": [
+        "Person",
+        "Quantity",
+        "Organization",
+        "URL",
+        "Email",
+        "Location",
+        "DateTime"
+      ],
+      "defaultLanguageCode": "en",
+      "minimumPrecision": null,
+      "includeTypelessEntities": null,
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/merged_content"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "organizations",
+          "targetName": "organizations"
+        },
+        {
+          "name": "persons",
+          "targetName": "people"
+        },
+        {
+          "name": "entities",
+          "targetName": "entities"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.KeyPhraseExtractionSkill",
+      "name": "#2",
+      "description": null,
+      "context": "/document/merged_content",
+      "defaultLanguageCode": "en",
+      "maxKeyPhraseCount": null,
+      "modelVersion": null,
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/merged_content"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "keyPhrases",
+          "targetName": "keyphrases"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.MergeSkill",
+      "name": "#3",
+      "description": null,
+      "context": "/document",
+      "insertPreTag": " ",
+      "insertPostTag": " ",
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/content"
+        },
+        {
+          "name": "itemsToInsert",
+          "source": "/document/normalized_images/*/text"
+        },
+        {
+          "name": "offsets",
+          "source": "/document/normalized_images/*/contentOffset"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mergedText",
+          "targetName": "merged_content"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Vision.OcrSkill",
+      "name": "#4",
+      "description": null,
+      "context": "/document/normalized_images/*",
+      "textExtractionAlgorithm": null,
+      "lineEnding": "Space",
+      "defaultLanguageCode": "en",
+      "detectOrientation": true,
+      "inputs": [
+        {
+          "name": "image",
+          "source": "/document/normalized_images/*"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "targetName": "text"
+        },
+        {
+          "name": "layoutText",
+          "targetName": "layoutText"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Vision.ImageAnalysisSkill",
+      "name": "#5",
+      "description": null,
+      "context": "/document/normalized_images/*",
+      "defaultLanguageCode": "en",
+      "visualFeatures": [
+        "tags"
+      ],
+      "details": [],
+      "inputs": [
+        {
+          "name": "image",
+          "source": "/document/normalized_images/*"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "tags",
+          "targetName": "imageTags"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.CognitiveServicesByKey",
+    "description": "/subscriptions/ee3b68d8-88cc-4f67-80d2-1cca304c3a9c/resourceGroups/laakaye/providers/Microsoft.CognitiveServices/accounts/awari",
+    "key": "345afcfd0efd4202908419ee818a0997"
+  },
+  "knowledgeStore": {
+    "storageConnectionString": "DefaultEndpointsProtocol=https;AccountName=baluwe;AccountKey=2dwunnH0asRiuil8i/HnrtWBVEu3EtTsazGlYURGvoou66Xtz8Vr3j0pWGpstAuBzQnJZt4cN11Kzq3bu8+yEA==;EndpointSuffix=core.windows.net",
+    "projections": [
+      {
+        "tables": [],
+        "objects": [],
+        "files": [
+          {
+            "storageContainer": "papers-skillset-image-projection",
+            "referenceKeyName": null,
+            "generatedKeyName": "imagepath",
+            "source": "/document/normalized_images/*",
+            "sourceContext": null,
+            "inputs": []
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "synthesizeGeneratedKeyName": true
+    }
+  },
+  "encryptionKey": null
+}

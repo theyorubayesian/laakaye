@@ -1,0 +1,322 @@
+{
+  "@odata.context": "https://awari.search.windows.net/$metadata#skillsets/$entity",
+  "@odata.etag": "\"0x8D96481AEA2F843\"",
+  "name": "courses-skillset",
+  "description": "Skillset created from the portal. skillsetName: courses-skillset; contentField: PartitionKey; enrichmentGranularity: document; knowledgeStoreStorageAccount: baluwe;",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Text.EntityRecognitionSkill",
+      "name": "#1",
+      "description": null,
+      "context": "/document/PartitionKey",
+      "categories": [
+        "Person",
+        "Quantity",
+        "Organization",
+        "URL",
+        "Email",
+        "Location",
+        "DateTime"
+      ],
+      "defaultLanguageCode": "en",
+      "minimumPrecision": null,
+      "includeTypelessEntities": null,
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/PartitionKey"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "organizations",
+          "targetName": "organizations"
+        },
+        {
+          "name": "entities",
+          "targetName": "entities"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.KeyPhraseExtractionSkill",
+      "name": "#2",
+      "description": null,
+      "context": "/document/PartitionKey",
+      "defaultLanguageCode": "en",
+      "maxKeyPhraseCount": null,
+      "modelVersion": null,
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/PartitionKey"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "keyPhrases",
+          "targetName": "keyphrases"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Util.ShaperSkill",
+      "name": "#3",
+      "description": null,
+      "context": "/document",
+      "inputs": [
+        {
+          "name": "PartitionKey",
+          "source": "/document/PartitionKey"
+        },
+        {
+          "name": "RowKey",
+          "source": "/document/RowKey"
+        },
+        {
+          "name": "ETag",
+          "source": "/document/ETag"
+        },
+        {
+          "name": "Timestamp",
+          "source": "/document/Timestamp"
+        },
+        {
+          "name": "Key",
+          "source": "/document/Key"
+        },
+        {
+          "name": "description",
+          "source": "/document/description"
+        },
+        {
+          "name": "duration",
+          "source": "/document/duration"
+        },
+        {
+          "name": "instructor",
+          "source": "/document/instructor"
+        },
+        {
+          "name": "level",
+          "source": "/document/level"
+        },
+        {
+          "name": "product",
+          "source": "/document/product"
+        },
+        {
+          "name": "rating_average",
+          "source": "/document/rating_average"
+        },
+        {
+          "name": "rating_count",
+          "source": "/document/rating_count"
+        },
+        {
+          "name": "role",
+          "source": "/document/role"
+        },
+        {
+          "name": "source",
+          "source": "/document/source"
+        },
+        {
+          "name": "title",
+          "source": "/document/title"
+        },
+        {
+          "name": "url",
+          "source": "/document/url"
+        },
+        {
+          "name": "keyPhrases",
+          "source": "/document/PartitionKey/keyphrases/*"
+        },
+        {
+          "name": "Entities",
+          "sourceContext": "/document/PartitionKey/entities/*",
+          "inputs": [
+            {
+              "name": "Entity",
+              "source": "/document/PartitionKey/entities/*/name"
+            },
+            {
+              "name": "EntityType",
+              "source": "/document/PartitionKey/entities/*/type"
+            },
+            {
+              "name": "EntitySubType",
+              "source": "/document/PartitionKey/entities/*/subType"
+            },
+            {
+              "name": "Url",
+              "source": "/document/PartitionKey/entities/*/wikipediaUrl"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "targetName": "tableprojection"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.CustomEntityLookupSkill",
+      "name": "#4",
+      "description": "Provide information about instructors",
+      "context": "/document",
+      "defaultLanguageCode": "en",
+      "entitiesDefinitionUri": null,
+      "globalDefaultCaseSensitive": false,
+      "globalDefaultAccentSensitive": false,
+      "globalDefaultFuzzyEditDistance": 2,
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/instructor"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "entities",
+          "targetName": "instructorProfile"
+        }
+      ],
+      "inlineEntitiesDefinition": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events.",
+          "type": null,
+          "subtype": null,
+          "id": null,
+          "caseSensitive": null,
+          "accentSensitive": null,
+          "fuzzyEditDistance": null,
+          "defaultCaseSensitive": null,
+          "defaultAccentSensitive": null,
+          "defaultFuzzyEditDistance": null,
+          "aliases": []
+        },
+        {
+          "name": "Claudia Blackman",
+          "description": "Claudia is our senior DevOps engineer. She is charged with overseeing our DevOps operations and has been with the company for 2 years. Claudia enjoys downhill skiing and is a member of the local Search & Rescue Team.",
+          "type": null,
+          "subtype": null,
+          "id": null,
+          "caseSensitive": null,
+          "accentSensitive": null,
+          "fuzzyEditDistance": null,
+          "defaultCaseSensitive": null,
+          "defaultAccentSensitive": null,
+          "defaultFuzzyEditDistance": null,
+          "aliases": []
+        },
+        {
+          "name": "Robert Gillis",
+          "description": "Robert is our GIS specialist in charge of making beautiful maps for our users. He has been with the company for 8 years and enjoys hiking, fishing, and any other outdoor activity.",
+          "type": null,
+          "subtype": null,
+          "id": null,
+          "caseSensitive": null,
+          "accentSensitive": null,
+          "fuzzyEditDistance": null,
+          "defaultCaseSensitive": null,
+          "defaultAccentSensitive": null,
+          "defaultFuzzyEditDistance": null,
+          "aliases": []
+        },
+        {
+          "name": "Gerald Dominguez",
+          "description": "Gerald is a Junior IT Administrator and has been with the company for 1 year. Gerald played NCAA soccer and is a part-time soccer coach on weekends. ",
+          "type": null,
+          "subtype": null,
+          "id": null,
+          "caseSensitive": null,
+          "accentSensitive": null,
+          "fuzzyEditDistance": null,
+          "defaultCaseSensitive": null,
+          "defaultAccentSensitive": null,
+          "defaultFuzzyEditDistance": null,
+          "aliases": []
+        },
+        {
+          "name": "Eileen Diaz",
+          "description": "Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time.",
+          "type": null,
+          "subtype": null,
+          "id": null,
+          "caseSensitive": null,
+          "accentSensitive": null,
+          "fuzzyEditDistance": null,
+          "defaultCaseSensitive": null,
+          "defaultAccentSensitive": null,
+          "defaultFuzzyEditDistance": null,
+          "aliases": []
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.CognitiveServicesByKey",
+    "description": "/subscriptions/ee3b68d8-88cc-4f67-80d2-1cca304c3a9c/resourceGroups/laakaye/providers/Microsoft.CognitiveServices/accounts/awari",
+    "key": "345afcfd0efd4202908419ee818a0997"
+  },
+  "knowledgeStore": {
+    "storageConnectionString": "DefaultEndpointsProtocol=https;AccountName=baluwe;AccountKey=2dwunnH0asRiuil8i/HnrtWBVEu3EtTsazGlYURGvoou66Xtz8Vr3j0pWGpstAuBzQnJZt4cN11Kzq3bu8+yEA==;EndpointSuffix=core.windows.net",
+    "projections": [
+      {
+        "tables": [
+          {
+            "tableName": "coursesSkillsetDocument",
+            "referenceKeyName": null,
+            "generatedKeyName": "Documentid",
+            "source": "/document/tableprojection",
+            "sourceContext": null,
+            "inputs": []
+          },
+          {
+            "tableName": "coursesSkillsetKeyPhrases",
+            "referenceKeyName": null,
+            "generatedKeyName": "KeyPhrasesid",
+            "source": null,
+            "sourceContext": "/document/tableprojection/keyPhrases/*",
+            "inputs": [
+              {
+                "name": "keyphrases",
+                "source": "/document/tableprojection/keyPhrases/*",
+                "sourceContext": null,
+                "inputs": []
+              }
+            ]
+          },
+          {
+            "tableName": "coursesSkillsetEntities",
+            "referenceKeyName": null,
+            "generatedKeyName": "Entitiesid",
+            "source": "/document/tableprojection/Entities/*",
+            "sourceContext": null,
+            "inputs": []
+          }
+        ],
+        "objects": [],
+        "files": [
+          {
+            "storageContainer": "courses-skillset-image-projection",
+            "referenceKeyName": null,
+            "generatedKeyName": "imagepath",
+            "source": "/document/tableprojection/Images/*/imgdata",
+            "sourceContext": null,
+            "inputs": []
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "synthesizeGeneratedKeyName": true
+    }
+  },
+  "encryptionKey": null
+}

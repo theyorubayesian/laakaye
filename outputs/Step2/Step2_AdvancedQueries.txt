@@ -1,0 +1,481 @@
+"""
+For the Courses Index, Results have been truncated to first three returned documents for brevity
+For the Papers Index, the content fields have been truncated and only the first document returned 
+included in this text file
+"""
+# ----------------------------------------
+Index: Papers
+Query: search=reputation systems&organizations=Journal of trust management
+# ----------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azureblob-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 28.283611,
+            "content": "\nSänger et al. Journal of Trust Management  (2015) 2:5 \nDOI 10.1186/s40493-015-0015-3\n\nRESEARCH Open Access\n\nReusable components for online reputation\nsystems\nJohannes Sänger*, Christian Richthammer and Günther Pernul\n\n*Correspondence:\njohannes.saenger@wiwi.\nuni-regensburg.de\nUniversity of Regensburg,\nUniversitätsstraße 31, 93053\nRegensburg, Germany\n\nAbstract\n\nReputation systems have been extensively explored in various disciplines and\napplication areas. A problem in this context is that the computation engines applied by\nmost reputation systems available are designed from scratch and rarely consider well\nestablished concepts and achievements made by others. Thus, approved models and\npromising approaches may get lost in the shuffle. In this work, we aim to foster reuse in\nrespect of trust and reputation systems by providing a hierarchical component\ntaxonomy of computation engines which serves as a natural framework for the design\nof new reputation systems. In order to assist the design process we, furthermore,\nprovide a component repository that contains design knowledge on both a\nconceptual and an implementation level. To evaluate our approach we conduct a\ndescriptive scenario-based analysis which shows that it has an obvious utility from a\npractical point of view. Matching the identified components and the properties of trust\nintroduced in literature, we finally show which properties of trust are widely covered by\ncommon models and which aspects have only rarely been considered so far.\n\nKeywords: Trust; Reputation; Reusability; Trust pattern\n\nIntroduction\nIn the last decade, trust and reputation have been extensively explored in various disci-\nplines and application areas...."
+            "metadata_storage_path": "aHR0cHM6Ly9iYWx1d2UuYmxvYi5jb3JlLndpbmRvd3MubmV0L3BhcGVycy9zNDA0OTMtMDE1LTAwMTUtMy5wZGY1",
+            "metadata_title": "",
+            "metadata_creation_date": "2015-05-19T12:42:36Z",
+            "organizations": [
+                "al. Journal of Trust Management",
+                "University of Regensburg",
+                "Reusability; Trust",
+                "eBay",
+                "Springer",
+                "Creative Commons\nAttribution License",
+                "Page 2",
+                "Gambetta",
+                "Dynamic Trust",
+                "The",
+                "Ama",
+                "Reflexive Trust",
+                "Figure 1",
+                "Time",
+                "Sporas",
+                "Further",
+                "iCLUB",
+                "Google",
+                "Epinions",
+                "Sun",
+                "Sun et al.",
+                "Amazon",
+                "Hidden\nMarkov Models",
+                "PDF",
+                "Hidden\nMarkov Model",
+                "Eigentrust Algorithm",
+                ],
+            "people": [
+                "Johannes",
+                "Christian Richthammer",
+                "Günther Pernul",
+                "Springer",
+                "Gambetta",
+                "Alice",
+                "Bob",
+                "Claire",
+                "Christianson",
+                "Harbison",
+                "Alice trusts Claire",
+                "Rachel",
+                "Zhang",
+                "Page",
+                "Slashdot",
+                "Yu",
+                "Singh",
+                "Malik"
+            ],
+            "keyphrases": [
+                "mobile ad hoc networks",
+                "Günther Pernul",
+                "Universitätsstraße",
+                "descriptive scenario-based analysis",
+                "one novel idea",
+                "Open Access article",
+                "single building blocks",
+                "RESEARCH Open Access",
+                ...
+                ...
+            ]
+        },
+        {
+            "@search.score": 26.729652,
+            "content": "\nChandrasekaran and Esfandiari Journal of Trust Management  (2015) 2:8 \nDOI 10.1186/s40493-015-0019-z\n\nRESEARCH Open Access\n\nToward a testbed for evaluating\ncomputational trust models: experiments\nand analysis\nPartheeban Chandrasekaran and Babak Esfandiari*\n\n*Correspondence:\nbabak@sce.carleton.ca\nDepartment of Systems and\nComputer Engineering, Carleton\nUniversity, 1125 Colonel By Drive,\nOttawa, Ontario K1s5B6, Canada\n\nAbstract\nWe propose a generic testbed for evaluating social trust models and we show how\nexisting models can fit our tesbed. To showcase the flexibility of our design, we\nimplemented a prototype and evaluated three trust algorithms, namely EigenTrust,\nPeerTrust and Appleseed, for their vulnerabilites to attacks and compliance to various\ntrust properties. For example, we were able to exhibit discrepancies between\nEigenTrust and PeerTrust, as well as trade-offs between resistance to slandering attacks\nversus self-promotion.\n\nKeywords: Trust testbed; Reputation; Multi-agent systems\n\nIntroduction\nMotivation\n\nWith the growth of online community-based systems such as peer-to-peer file-sharing\napplications, e-commerce and social networking websites, there is an increasing need to\nprovide computational trust mechanisms to determine which users or agents are honest\nand which ones are malicious. Many models calculate trust by relying on analyzing a\nhistory of interactions. The calculations can range from the simple averaging of ratings\non eBay to flow-based scores in the Advogato website. Thus for a researcher to evaluate\nand compare his or her latest model against existing ones, a comprehensive test tool is\nneeded. However, our research shows that the tools that exist to assist researchers are not\nflexible enough to include different trust models and their evaluations. Moreover, these\ntools use their own set of application-dependent metrics to evaluate a reputation system.\nThis means that a number of trust models cannot be evaluated for vulnerabilities against\ncertain types of attacks. Thus, there is still a need for a generic testbed to evaluate and\ncompare computational trust models.\n\nOverview of our solution and contributions\n\nIn this paper, we present a model and a testbed for evaluating a family of trust algo-\nrithms that rely on past transactions between agents. Trust assessment is viewed as a\nprocess consisting of a succession of graph transformations, where the agents form the\nvertices of the graph. The meaning of the edges depends on the transformation stage,\n\n© 2015 Chandrasekaran and Esfandiari. Open Access This article is distributed under the terms of the Creative Commons\nAttribution 4.0 International License...",
+            "metadata_storage_path": "aHR0cHM6Ly9iYWx1d2UuYmxvYi5jb3JlLndpbmRvd3MubmV0L3BhcGVycy9zNDA0OTMtMDE1LTAwMTktei5wZGY1",
+            "metadata_title": "Toward a testbed for evaluating computational trust models: experiments and analysis",
+            "metadata_creation_date": "2015-09-04T09:59:41Z",
+            "organizations": [
+                "Esfandiari Journal of Trust Management",
+                "Partheeban Chandrasekaran",
+                "Babak Esfandiari",
+                "Department of Systems and\nComputer Engineering",
+                "Carleton",
+                "Carleton\nUniversity",
+                "University",
+                "Introduction\nMotivation",
+                "eBay",
+                "Advogato",
+                "Open Access This",
+                "This",
+                ...
+            ],
+            "people": [
+                "Chandrasekaran",
+                "Appleseed",
+                "Abdul-Rahman",
+                "Rahman",
+                "Marsh",
+                "AppleSeed",
+                "Testbeds",
+                "Guha",
+                "Singh"
+            ],
+            "keyphrases": [
+                "social networking websites",
+                "comprehensive test tool",
+                "Attribution 4.0 International License",
+                "three trust algorithms",
+                "computational trust mechanisms",
+                "online community-based systems",
+                "Creative Commons license",
+                "computational trust models",
+                "social trust models",
+                "three reputation systems",
+                "different trust models",
+                "RESEARCH Open Access",
+                "existing reputation systems",
+                "trust assessment workflow",
+                "existing models",
+                "Many models",
+                ...
+            ]
+        }
+    ]
+}
+# -----------------------------------------------------------------------------
+Index: Papers
+Query: search=*&$select=description,rating_count&$filter=(rating_count gt 9000)
+# -----------------------------------------------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 10.697399,
+            "description": "Implement a CI/CD pipeline for Java containers."
+        },
+        {
+            "@search.score": 10.697399,
+            "description": "Implement a CI/CD pipeline for Java containers."
+        },
+        {
+            "@search.score": 10.697399,
+            "description": "Implement a CI/CD pipeline for Java containers."
+        },
+        {
+            "@search.score": 10.697399,
+            "description": "Implement a CI/CD pipeline for Java containers."
+        },
+        {
+            "@search.score": 10.697399,
+            "description": "Implement a CI/CD pipeline for Java containers."
+        },
+        {
+            "@search.score": 10.697399,
+            "description": "Implement a CI/CD pipeline for Java containers."
+        },
+        {
+            "@search.score": 10.697399,
+            "description": "Implement a CI/CD pipeline for Java containers."
+        },
+        {
+            "@search.score": 10.697399,
+            "description": "Implement a CI/CD pipeline for Java containers."
+        },
+        {
+            "@search.score": 3.831934,
+            "description": "Create a Terraform configuration, provision your Azure resources, and set up your project for continuous integration and continuous delivery (CI/CD) by using either GitHub Actions or Azure Pipelines."
+        },
+        {
+            "@search.score": 3.831934,
+            "description": "Create a Terraform configuration, provision your Azure resources, and set up your project for continuous integration and continuous delivery (CI/CD) by using either GitHub Actions or Azure Pipelines."
+        },
+        {
+            "@search.score": 3.831934,
+            "description": "Create a Terraform configuration, provision your Azure resources, and set up your project for continuous integration and continuous delivery (CI/CD) by using either GitHub Actions or Azure Pipelines."
+        },
+        {
+            "@search.score": 3.831934,
+            "description": "Create a Terraform configuration, provision your Azure resources, and set up your project for continuous integration and continuous delivery (CI/CD) by using either GitHub Actions or Azure Pipelines."
+        },
+        {
+            "@search.score": 3.831934,
+            "description": "Create a Terraform configuration, provision your Azure resources, and set up your project for continuous integration and continuous delivery (CI/CD) by using either GitHub Actions or Azure Pipelines."
+        }
+    ]
+}
+# ----------------------------------------
+Index: Papers
+Query: search=java&$select=description
+# ----------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        },
+        {
+            "@search.score": 1,
+            "description": "Get started with AI on Azure",
+            "rating_count": 10997
+        }
+    ]
+}
+# ----------------------------------------------------------------------------------------------------------------------------------------------------
+Index: Papers
+Query: search=*&$select=description,source,rating_count,rating_average&$filter=(rating_count gt 5000 and rating_count lt 9000)&$orderby=rating_average
+# ----------------------------------------------------------------------------------------------------------------------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 1,
+            "description": "Explore Azure DevOps capabilities and get started setting up your own organization knowing what separates elite performers from low performers.",
+            "rating_average": 4.73,
+            "rating_count": 7797,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Explore Azure DevOps capabilities and get started setting up your own organization knowing what separates elite performers from low performers.",
+            "rating_average": 4.73,
+            "rating_count": 7797,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Explore Azure DevOps capabilities and get started setting up your own organization knowing what separates elite performers from low performers.",
+            "rating_average": 4.73,
+            "rating_count": 7797,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Explore Azure DevOps capabilities and get started setting up your own organization knowing what separates elite performers from low performers.",
+            "rating_average": 4.73,
+            "rating_count": 7797,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Set up a continuous integration (CI) pipeline that automates the process of building your application.",
+            "rating_average": 4.75,
+            "rating_count": 5261,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Set up a continuous integration (CI) pipeline that automates the process of building your application.",
+            "rating_average": 4.75,
+            "rating_count": 5261,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Set up a continuous integration (CI) pipeline that automates the process of building your application.",
+            "rating_average": 4.75,
+            "rating_count": 5261,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Set up a continuous integration (CI) pipeline that automates the process of building your application.",
+            "rating_average": 4.75,
+            "rating_count": 5261,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        },
+        {
+            "@search.score": 1,
+            "description": "Examine Azure's AI services, and choose the right one for your company. Prepare for AZ-900.",
+            "rating_average": 4.78,
+            "rating_count": 7268,
+            "source": "MS Learn"
+        }
+    ]
+}
+# ----------------------------------------
+Index: Papers
+Query: search=jave&$select=description,source,rating_count,rating_average&$filter=(duration lt 60)
+# ----------------------------------------
+Results:
+{
+    "@odata.context": "https://awari.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": []
+}
