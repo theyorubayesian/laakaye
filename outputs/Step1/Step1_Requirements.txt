@@ -1,11 +1,20 @@
 # -----------------
 Design Requirements
 # -----------------
+
+# -------
+# Courses
+# -------
 - Users can retrieve information about courses by searching relevant keywords and phrases
 - Users can filter returned results using criteria such as course ratings and duration
 - Users can retrieve course instructor profiles
 - Users can facet information using relevant fields: source, skills, role
-- Users can sort information by relevant fields
+- Users can sort information by relevant fields such as source, role etc. 
+
+
+# -------
+# Library
+# -------
 - Users can retrieve information from journal articles related to their big data work using keywords and phrases, authors and their associated institutions
 - Users can retrieve journal articles by searching publication name, publisher and publication date.
 - Users can retrieve the DOI (Digital Object Identifier) for journal articles
